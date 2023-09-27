@@ -1,0 +1,39 @@
+﻿@page "/calculator"
+
+<h1>Calculator</h1>
+
+<input @bind = "value1">
+<input @bind = "value2">
+<button @onclick ="Add">+</button>
+<div>result</div>
+
+
+@code {
+    int value1, value2;
+    string result = string.Empty;
+
+    void Add()
+    {
+        result = $"{value1} + {value2} = {result}";
+    }
+        /*string addition = string.Empty,
+        subtration = string.Empty,
+        divition = string.Empty,
+        multiplication = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        int value1 = 10, value2 = 20;
+        double result = value1 + value2;
+        addition = $"{value1} + {value2} = {result}";
+
+        result = value1 - value2;
+        subtration = $"{value1} - {value2} = {result}";
+
+        result = Convert.ToDouble(value1) / value2;
+        divition = $"{value1} / {value2} = {result}";
+
+        result = value1 * value2;
+        multiplication = $"{value1} * {value2} = {result}";*/
+    }
+}
